@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{471DA2FD-3310-403A-A4C8-D194F4FDEC47}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zorbo</RootNamespace>
+    <AssemblyName>Zorbo.Ares</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Zorbo.Ares.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Zorbo.Ares.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AresChannels.cs" />
+    <Compile Include="AresClientList.cs" />
+    <Compile Include="AresServer.cs" />
+    <Compile Include="AresAvatar.cs" />
+    <Compile Include="AresServerStats.cs" />
+    <Compile Include="Captcha.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="FloodCounter.cs" />
+    <Compile Include="Logging.cs" />
+    <Compile Include="Packets\AresId.cs" />
+    <Compile Include="Packets\AresPacket.cs" />
+    <Compile Include="Packets\Ares\Announce.cs" />
+    <Compile Include="Packets\Ares\AuthLogin.cs" />
+    <Compile Include="Packets\Ares\AuthRegister.cs" />
+    <Compile Include="Packets\Ares\AutoLogin.cs" />
+    <Compile Include="Packets\Ares\Browse.cs" />
+    <Compile Include="Packets\Ares\BrowseEnd.cs" />
+    <Compile Include="Packets\Ares\BrowseError.cs" />
+    <Compile Include="Packets\Ares\BrowseItem.cs" />
+    <Compile Include="Packets\Ares\BrowseStart.cs" />
+    <Compile Include="Packets\Ares\ClientAvatar.cs" />
+    <Compile Include="Packets\Ares\ClientCustom.cs" />
+    <Compile Include="Packets\Ares\ClientCustomAll.cs" />
+    <Compile Include="Packets\Ares\ClientDirectPush.cs" />
+    <Compile Include="Packets\Ares\ClientEmote.cs" />
+    <Compile Include="Packets\Ares\ClientNodes.cs" />
+    <Compile Include="Packets\Ares\ClientPersonal.cs" />
+    <Compile Include="Packets\Ares\ClientPublic.cs" />
+    <Compile Include="Packets\Ares\ClientUpdate.cs" />
+    <Compile Include="Packets\Ares\Command.cs" />
+    <Compile Include="Packets\Ares\Error.cs" />
+    <Compile Include="Packets\Ares\ClientFastPing.cs" />
+    <Compile Include="Packets\Ares\Features.cs" />
+    <Compile Include="Packets\Ares\Ignored.cs" />
+    <Compile Include="Packets\Ares\IgnoringYou.cs" />
+    <Compile Include="Packets\Ares\Joined.cs" />
+    <Compile Include="Packets\Ares\Login.cs" />
+    <Compile Include="Packets\Ares\LoginAck.cs" />
+    <Compile Include="Packets\Ares\Offline.cs" />
+    <Compile Include="Packets\Ares\OpChange.cs" />
+    <Compile Include="Packets\Ares\Parted.cs" />
+    <Compile Include="Packets\Ares\Private.cs" />
+    <Compile Include="Packets\Ares\Redirect.cs" />
+    <Compile Include="Packets\Ares\Search.cs" />
+    <Compile Include="Packets\Ares\SearchEnd.cs" />
+    <Compile Include="Packets\Ares\SearchHit.cs" />
+    <Compile Include="Packets\Ares\ServerAvatar.cs" />
+    <Compile Include="Packets\Ares\ServerDirectPush.cs" />
+    <Compile Include="Packets\Ares\ServerDirectPushError.cs" />
+    <Compile Include="Packets\Ares\ServerEmote.cs" />
+    <Compile Include="Packets\Ares\ServerFastPing.cs" />
+    <Compile Include="Packets\Ares\ServerHtml.cs" />
+    <Compile Include="Packets\Ares\ServerPersonal.cs" />
+    <Compile Include="Packets\Ares\ServerPublic.cs" />
+    <Compile Include="Packets\Ares\ServerUpdate.cs" />
+    <Compile Include="Packets\Ares\SharedFile.cs" />
+    <Compile Include="Packets\Ares\ServerNodes.cs" />
+    <Compile Include="Packets\Ares\Topic.cs" />
+    <Compile Include="Packets\Ares\Unknown.cs" />
+    <Compile Include="Packets\Ares\Website.cs" />
+    <Compile Include="Packets\Channels\AckInfo.cs" />
+    <Compile Include="Packets\Channels\AckIps.cs" />
+    <Compile Include="Packets\Channels\AckNodes.cs" />
+    <Compile Include="Packets\Channels\AddIps.cs" />
+    <Compile Include="Packets\Channels\CheckFirewall.cs" />
+    <Compile Include="Packets\Channels\CheckFirewallBusy.cs" />
+    <Compile Include="Packets\Channels\CheckFirewallReady.cs" />
+    <Compile Include="Packets\Channels\CheckFirewallWanted.cs" />
+    <Compile Include="Packets\Channels\SendInfo.cs" />
+    <Compile Include="Packets\Channels\SendNodes.cs" />
+    <Compile Include="Packets\Formatters\ChannelFormatter.cs" />
+    <Compile Include="Packets\Formatters\ClientFormatter.cs" />
+    <Compile Include="Packets\Formatters\ServerFormatter.cs" />
+    <Compile Include="Packets\UdpId.cs" />
+    <Compile Include="Packets\UdpPacket.cs" />
+    <Compile Include="Packets\UdpSerializer.cs" />
+    <Compile Include="Plugins\Plugin.cs" />
+    <Compile Include="Plugins\PluginHost.cs" />
+    <Compile Include="Plugins\PluginLoadException.cs" />
+    <Compile Include="Resources\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sockets\AresTcpSocket.cs" />
+    <Compile Include="AresClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Errors1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Errors.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sockets\AresUdpSocket.cs" />
+    <Compile Include="Sockets\SocketAcceptTask.cs" />
+    <Compile Include="Sockets\SocketConnectTask.cs" />
+    <Compile Include="Sockets\SocketDisconnectTask.cs" />
+    <Compile Include="Sockets\SocketExtensions.cs" />
+    <Compile Include="Sockets\SocketManager.cs" />
+    <Compile Include="Sockets\SocketReceiveTask.cs" />
+    <Compile Include="Sockets\SocketSendTask.cs" />
+    <Compile Include="Users\Admin.cs" />
+    <Compile Include="Users\Banned.cs" />
+    <Compile Include="Users\DnsBanned.cs" />
+    <Compile Include="Users\History.cs" />
+    <Compile Include="Users\Password.cs" />
+    <Compile Include="Users\Passwords.cs" />
+    <Compile Include="Users\RangeBanned.cs" />
+    <Compile Include="Users\ClientId.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zorbo.Interface\Zorbo.Interface.csproj">
+      <Project>{F1BD73C5-1016-4616-A5FD-A356C08F8074}</Project>
+      <Name>Zorbo.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Errors.resx">
+      <LastGenOutput>Errors1.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servers.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License.txt" />
+    <EmbeddedResource Include="Resources\app.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

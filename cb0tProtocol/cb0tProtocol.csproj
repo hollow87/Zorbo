@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5510602B-2E01-4EF5-A563-35B8751DC4D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cb0tProtocol</RootNamespace>
+    <AssemblyName>cb0tProtocol</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\cb0tProtocol.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\cb0tProtocol.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jurassic, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jurassic.2.2.1\lib\net35\Jurassic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedFormatter.cs" />
+    <Compile Include="AdvancedId.cs" />
+    <Compile Include="Packets\Advanced.cs" />
+    <Compile Include="Packets\ClientAddTags.cs" />
+    <Compile Include="Packets\ClientEmoteDelete.cs" />
+    <Compile Include="Packets\ClientEmoteItem.cs" />
+    <Compile Include="Packets\ClientEmoteSupport.cs" />
+    <Compile Include="Packets\ClientFont.cs" />
+    <Compile Include="Packets\ClientRemTags.cs" />
+    <Compile Include="Packets\ClientScribbleChunk.cs" />
+    <Compile Include="Packets\ClientScribbleFirst.cs" />
+    <Compile Include="Packets\ClientVoiceChunk.cs" />
+    <Compile Include="Packets\ClientVoiceChunkTo.cs" />
+    <Compile Include="Packets\ClientVoiceFirst.cs" />
+    <Compile Include="Packets\ClientVoiceFirstTo.cs" />
+    <Compile Include="Packets\ClientVoiceIgnore.cs" />
+    <Compile Include="Packets\ClientVoiceSupport.cs" />
+    <Compile Include="Packets\ServerEmoteDelete.cs" />
+    <Compile Include="Packets\ServerEmoteItem.cs" />
+    <Compile Include="Packets\ServerEmoteSupport.cs" />
+    <Compile Include="Packets\ServerFont.cs" />
+    <Compile Include="Packets\ServerVoiceChunk.cs" />
+    <Compile Include="Packets\ServerVoiceChunkFrom.cs" />
+    <Compile Include="Packets\ServerVoiceFirst.cs" />
+    <Compile Include="Packets\ServerVoiceFirstFrom.cs" />
+    <Compile Include="Packets\ServerVoiceIgnore.cs" />
+    <Compile Include="Packets\ServerVoiceNoPrivate.cs" />
+    <Compile Include="Packets\ServerVoiceSupport.cs" />
+    <Compile Include="Packets\ServerVoiceSupportUser.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoomScribble.cs" />
+    <Compile Include="Objects\Scribble.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Javascript\Javascript.csproj">
+      <Project>{2a5a0e36-24de-4309-a9a0-609a92f50d6a}</Project>
+      <Name>Javascript</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zorbo.Ares\Zorbo.Ares.csproj">
+      <Project>{471DA2FD-3310-403A-A4C8-D194F4FDEC47}</Project>
+      <Name>Zorbo.Ares</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zorbo.Interface\Zorbo.Interface.csproj">
+      <Project>{F1BD73C5-1016-4616-A5FD-A356C08F8074}</Project>
+      <Name>Zorbo.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF NOT exist "%25HomePath%25\AppData\Roaming\Zorbo\Plugins\$(TargetName)" mkdir "%25HomePath%25\AppData\Roaming\Zorbo\Plugins\$(TargetName)"
+copy "$(TargetDir)$(TargetName).dll" "%25HomePath%25\AppData\Roaming\Zorbo\Plugins\$(TargetName)\$(TargetName).dll"
+copy "$(TargetDir)Javascript.dll" "%25HomePath%25\AppData\Roaming\Zorbo\Plugins\$(TargetName)\Javascript.dll"
+copy "$(TargetDir)Jurassic.dll" "%25HomePath%25\AppData\Roaming\Zorbo\Plugins\$(TargetName)\Jurassic.dll"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
