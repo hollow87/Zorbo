@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,6 @@ using Zorbo.Packets;
 using Zorbo.Interface;
 using Zorbo.Serialization;
 using Zorbo.Packets.Ares;
-using System.Collections.Concurrent;
 
 namespace Zorbo.Sockets
 {
